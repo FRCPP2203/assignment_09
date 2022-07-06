@@ -1,17 +1,17 @@
 #pragma once
 #include "../IShape.h"
 
-class Rectangle : public IShape
+class Circle : public IShape
 {
 private:
     Point m_G;
-    double m_Width, m_Height;
+    double m_R;
 
 public:
-    Rectangle(Point &p_A, double p_Width, double p_Height);
+    Circle(Point &p_G, double p_R);
     double getPerimeter();
     double getArea();
     void fromString(const std::string &s);
     std::string toString();
-    ~Rectangle();
+    ~Circle();
 };

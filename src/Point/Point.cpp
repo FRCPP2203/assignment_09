@@ -1,5 +1,4 @@
 #include "Point.h"
-#include "math.h"
 
 Point::Point(double p_x, double p_y)
     : x(p_x), y(p_y)
@@ -7,6 +6,10 @@ Point::Point(double p_x, double p_y)
 }
 
 Point::Point(const Point &p_point)
+{
+}
+
+Point::Point()
 {
 }
 

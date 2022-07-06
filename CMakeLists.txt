@@ -13,8 +13,8 @@ add_executable(${PROJECT_NAME} src/main.cpp ${SOURCE_FILES})
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/res)
 
 file(COPY
-       "res/"
-       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/res)
+       "${CMAKE_CURRENT_SOURCE_DIR}/res/"
+       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/res/)
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_11)
 

@@ -1,15 +1,12 @@
 #pragma once
-
 #include <string>
-class Shape
+#include "../Point/Point.h"
+
+class IShape : public Point
 {
-private:
-    /* data */
 public:
-    Shape();
     virtual double getPerimeter() = 0;
     virtual double getArea() = 0;
     virtual void fromString(const std::string &s) = 0;
     virtual std::string toString() = 0;
-    ~Shape();
 };

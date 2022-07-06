@@ -1,17 +1,17 @@
 #pragma once
-#include "../Shape/Shape.h"
-#include "../../Point/Point.h"
+#include "../IShape.h"
 
-class Triangle : public Shape
+class Triangle : public IShape
 {
 private:
-    Point A, B, C;
+    Point m_A, m_B, m_C;
+    double m_ab, m_bc, m_ac;
 
 public:
-    Triangle(const Point &p_A, const Point &p_B, const Point &p_C);
-    double getPerimeter() override;
-    double getArea() override;
-    void fromString(const std::string &s) override;
-    std::string toString() override;
+    Triangle(Point &p_A, Point &p_B, Point &p_C);
+    double getPerimeter();
+    double getArea();
+    void fromString(const std::string &p_s);
+    std::string toString();
     ~Triangle();
 };
