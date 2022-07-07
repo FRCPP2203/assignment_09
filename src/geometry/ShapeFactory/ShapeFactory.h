@@ -3,6 +3,10 @@
 #include <fstream>
 #include <iostream>
 #include "../Shape/Shape.h"
+#include "../Triangle/Triangle.h"
+#include "../Circle/Circle.h"
+#include "../Rectangle/Rectangle.h"
+#include "../Ellipse/Ellipse.h"
 class ShapeFactory
 {
 private:

@@ -8,6 +8,7 @@ private:
     double m_ab, m_bc, m_ac;
 
 public:
+    Triangle();
     Triangle(Point &p_A, Point &p_B, Point &p_C);
     double getPerimeter() override;
     double getArea() override;
