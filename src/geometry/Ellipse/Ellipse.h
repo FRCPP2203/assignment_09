@@ -9,9 +9,9 @@ private:
 
 public:
     Ellipse(Point &p_G, double p_RX, double p_RY);
-    double getPerimeter();
-    double getArea();
-    void fromString(const std::string &s);
-    std::string toString();
+    double getPerimeter() override;
+    double getArea() override;
+    void fromString(const std::string &p_s) override;
+    std::string toString() override;
     ~Ellipse();
 };

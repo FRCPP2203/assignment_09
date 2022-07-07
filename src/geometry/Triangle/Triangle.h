@@ -9,9 +9,9 @@ private:
 
 public:
     Triangle(Point &p_A, Point &p_B, Point &p_C);
-    double getPerimeter();
-    double getArea();
-    void fromString(const std::string &p_s);
-    std::string toString();
+    double getPerimeter() override;
+    double getArea() override;
+    void fromString(const std::string &p_s) override;
+    std::string toString() override;
     ~Triangle();
 };

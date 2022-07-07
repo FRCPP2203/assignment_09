@@ -9,9 +9,9 @@ private:
 
 public:
     Rectangle(Point &p_A, double p_Width, double p_Height);
-    double getPerimeter();
-    double getArea();
-    void fromString(const std::string &s);
-    std::string toString();
+    double getPerimeter() override;
+    double getArea() override;
+    void fromString(const std::string &p_s) override;
+    std::string toString() override;
     ~Rectangle();
 };

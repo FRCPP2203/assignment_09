@@ -9,9 +9,9 @@ private:
 
 public:
     Circle(Point &p_G, double p_R);
-    double getPerimeter();
-    double getArea();
-    void fromString(const std::string &s);
-    std::string toString();
+    double getPerimeter() override;
+    double getArea() override;
+    void fromString(const std::string &p_s) override;
+    std::string toString() override;
     ~Circle();
 };
