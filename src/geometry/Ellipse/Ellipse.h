@@ -5,10 +5,10 @@ class Ellipse : public IShape
 {
 private:
     Point m_G;
-    double m_R;
+    double m_RX, m_RY;
 
 public:
-    Ellipse(Point &p_G, double p_R);
+    Ellipse(Point &p_G, double p_RX, double p_RY);
     double getPerimeter();
     double getArea();
     void fromString(const std::string &s);

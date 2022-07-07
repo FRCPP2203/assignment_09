@@ -7,11 +7,11 @@ Circle::Circle(Point &p_G, double p_R)
 
 double Circle::getPerimeter()
 {
-    return 2 * m_R * 3.14;
+    return 2 * m_R * PI;
 }
 double Circle::getArea()
 {
-    return 3.14 * m_R * m_R;
+    return PI * m_R * m_R;
 }
 void Circle::fromString(const std::string &p_s)
 {

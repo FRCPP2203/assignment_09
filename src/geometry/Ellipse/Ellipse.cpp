@@ -1,17 +1,17 @@
 #include "Ellipse.h"
 
-Ellipse::Ellipse(Point &p_G, double p_R)
-    : m_G(p_G), m_R(p_R)
+Ellipse::Ellipse(Point &p_G, double p_RX, double p_RY)
+    : m_G(p_G), m_RX(p_RX), m_RY(p_RY)
 {
 }
 
 double Ellipse::getPerimeter()
 {
-    return 2 * m_R * 3.14;
+    return 2 * PI * sqrt((pow(m_RX, 2) + pow(m_RY, 2)) / 2);
 }
 double Ellipse::getArea()
 {
-    return 3.14 * m_R * m_R;
+    return PI * m_RX * m_RY;
 }
 void Ellipse::fromString(const std::string &p_s)
 {

@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "../Point/Point.h"
-
+#define PI 3.14
 class IShape : public Point
 {
 public:

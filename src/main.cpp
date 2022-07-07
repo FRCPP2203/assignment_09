@@ -11,23 +11,18 @@ int main()
     {
         while (getline(data, line))
         {
-            std::cout << line[0] << '\n';
             switch (line[0])
             {
-            case 0:
             case '0':
                 // ptr_shape = new Triangle(Point(line[1], line[2]), Point(line[3], line[4]), Point(line[5], line[6]));
                 std::cout << "Triangle" << std::endl;
                 break;
-            case 1:
             case '1':
                 std::cout << "Rectangle" << std::endl;
                 break;
-            case 2:
             case '2':
                 std::cout << "Circle" << std::endl;
                 break;
-            case 3:
             case '3':
                 std::cout << "Ellipse" << std::endl;
                 break;
