@@ -23,26 +23,14 @@ double Triangle::getArea()
 }
 void Triangle::fromString(const std::string &p_s)
 {
-    int index = 0;
-    int len = p_s.size();
-    while (len >= 0 && index < len)
-    {
-        if (p_s[index + 1] != ' ')
-        {
-            index = index + 1;
-            continue;
-        }
-        std::cout << p_s[index] << std::endl;
-        index += 2;
-        len--;
-    }
-
-    // m_A.setX(strToNum<int>(p_s));
-    // m_A.setY(strToNum<int>(p_s));
-    // m_B.setX(strToNum<int>(p_s));
-    // m_B.setY(strToNum<int>(p_s));
-    // m_C.setX(strToNum<int>(p_s));
-    // m_C.setY(strToNum<int>(p_s));
+    std::vector<std::string> inputs = strToVec(p_s);
+    // std::cout << inputs.size() << std::endl;
+    /*     m_A.setX(strToNum<int>(inputs[0]));
+        m_A.setY(strToNum<int>(inputs[1]));
+        m_B.setX(strToNum<int>(inputs[2]));
+        m_B.setY(strToNum<int>(inputs[3]));
+        m_C.setX(strToNum<int>(inputs[4]));
+        m_C.setY(strToNum<int>(inputs[5])); */
 }
 std::string Triangle::toString()
 {

@@ -5,7 +5,7 @@ Shape *ShapeFactory::createShape(int type, const std::string &s)
     Shape *shapeObj = nullptr;
     switch (type)
     {
-    case 0:
+    case 2:
         shapeObj = new Triangle();
         shapeObj->fromString(s);
         std::cout << shapeObj->toString() << std::endl;
@@ -27,7 +27,7 @@ std::list<Shape *> ShapeFactory::readShapesFromFile(const std::string &filename)
         while (getline(data, line))
         {
             std::string type = line.substr(0, 1);
-            std::string s = line.substr(2, line.size());
+            std::string s = line.substr(2, line.length() - 2);
             shapes.push_back(createShape(strToNum<int>(type), s));
         }
         data.close();
@@ -45,8 +45,7 @@ void ShapeFactory::saveShapesToFile(const std::string &filename, const std::list
 
     for (Shape *shape : shapes)
     {
-        record << shape->toString()
-               << "\n";
+        record << shape->toString() << "\n";
     }
     record.close();
 }
