@@ -11,6 +11,7 @@ private:
     double m_R;
 
 public:
+    Circle();
     Circle(Point &p_G, double p_R);
     double getPerimeter() override;
     double getArea() override;

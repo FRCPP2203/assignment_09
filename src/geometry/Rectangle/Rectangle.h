@@ -11,6 +11,7 @@ private:
     double m_Width, m_Height;
 
 public:
+    Rectangle();
     Rectangle(Point &p_A, double p_Width, double p_Height);
     double getPerimeter() override;
     double getArea() override;

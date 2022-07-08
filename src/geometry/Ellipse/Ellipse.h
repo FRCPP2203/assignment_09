@@ -12,6 +12,7 @@ private:
     double m_RX, m_RY;
 
 public:
+    Ellipse();
     Ellipse(Point &p_G, double p_RX, double p_RY);
     double getPerimeter() override;
     double getArea() override;

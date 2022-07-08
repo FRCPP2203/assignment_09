@@ -11,7 +11,18 @@ Shape *ShapeFactory::createShape(int type, const std::string &s)
     case 0:
         shapeObj = new Triangle();
         shapeObj->fromString(s);
-        std::cout << shapeObj->toString() << std::endl;
+        break;
+    case 1:
+        shapeObj = new Rectangle();
+        shapeObj->fromString(s);
+        break;
+    case 2:
+        shapeObj = new Circle();
+        shapeObj->fromString(s);
+        break;
+    case 3:
+        shapeObj = new Ellipse();
+        shapeObj->fromString(s);
         break;
 
     default:
@@ -48,6 +59,7 @@ void ShapeFactory::saveShapesToFile(const std::string &filename, const std::list
 
     for (Shape *shape : shapes)
     {
+        std::cout << shape->toString() << "\n";
         record << shape->toString() << "\n";
     }
     record.close();

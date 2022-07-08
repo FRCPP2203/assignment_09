@@ -7,7 +7,6 @@
 class Shape
 {
 public:
-    Shape();
     virtual double getPerimeter() = 0;
     virtual double getArea() = 0;
     virtual void fromString(const std::string &s) = 0;
