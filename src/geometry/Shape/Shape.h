@@ -1,7 +1,6 @@
 #ifndef __SHAPE_H__
 #define __SHAPE_H__
 
-#pragma once
 #include <string>
 
 #define PI 3.14

@@ -1,5 +1,3 @@
-#ifndef __POINT_H__
-#define __POINT_H__
 
 #include "Point.h"
 
@@ -42,35 +40,68 @@ Point &Point::operator=(const Point &p_point)
     return *this;
 }
 
-Point &Point::operator+(const Point &p_point)
+Point &Point::operator+=(const Point &p_point)
 {
     x += p_point.x;
     y += p_point.y;
     return *this;
 }
-Point &Point::operator-(const Point &p_point)
+Point &Point::operator-=(const Point &p_point)
 {
     x -= p_point.x;
     y -= p_point.y;
     return *this;
 }
-Point &Point::operator*(const Point &p_point)
+Point &Point::operator*=(const Point &p_point)
 {
     x *= p_point.x;
     y *= p_point.y;
     return *this;
 }
 // chia cho 1 so
-Point &Point::operator/(const Point &p_point)
+Point &Point::operator/=(const Point &p_point)
 {
     x /= p_point.x;
     y /= p_point.y;
     return *this;
 }
 
-double Point::distance(const Point &p_point1, const Point &p_point2)
+Point Point::operator+(const Point &p_Point)
 {
-    return sqrt(pow(p_point2.x - p_point1.x, 2) + pow(p_point2.y - p_point1.x, 2));
+    Point result;
+    result.x = x + p_Point.x;
+    result.y = y + p_Point.y;
+
+    return result;
+}
+Point Point::operator-(const Point &p_Point)
+{
+    Point result;
+    result.x = x - p_Point.x;
+    result.y = y - p_Point.y;
+
+    return result;
+}
+Point Point::operator*(const Point &p_Point)
+{
+    Point result;
+    result.x = x * p_Point.x;
+    result.y = y * p_Point.y;
+
+    return result;
+}
+Point Point::operator/(const Point &p_Point)
+{
+    Point result;
+    result.x = x / p_Point.x;
+    result.y = y / p_Point.y;
+
+    return result;
+}
+
+double Point::distance(const Point &p_B)
+{
+    return sqrt(pow(p_B.x - x, 2) + pow(p_B.y - y, 2));
 }
 
 // (A1 * B1) + (A2 * B2)
@@ -81,4 +112,3 @@ double Point::dotProduct(const Point &p_point1, const Point &p_point2)
 Point::~Point()
 {
 }
-#endif // __POINT_H__

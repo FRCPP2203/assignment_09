@@ -1,7 +1,6 @@
 #ifndef __SHAPEFACTORY_H__
 #define __SHAPEFACTORY_H__
 
-#pragma once
 #include <list>
 #include <fstream>
 #include <iostream>
