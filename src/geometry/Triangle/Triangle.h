@@ -1,5 +1,10 @@
-#pragma once
+#ifndef __TRIANGLE_H__
+#define __TRIANGLE_H__
+
+#include <iostream>
 #include "../Shape/Shape.h"
+#include "../../Utils/Utils.h"
+#include "../../Point/Point.h"
 
 class Triangle : public Shape
 {
@@ -16,3 +21,5 @@ public:
     std::string toString() override;
     ~Triangle();
 };
+
+#endif // __TRIANGLE_H__

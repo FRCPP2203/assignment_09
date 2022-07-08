@@ -1,5 +1,5 @@
 #include "Triangle.h"
-#include <iostream>
+
 Triangle::Triangle(Point &p_A, Point &p_B, Point &p_C)
     : m_A(p_A), m_B(p_B), m_C(p_C)
 {
@@ -23,7 +23,7 @@ double Triangle::getArea()
 }
 void Triangle::fromString(const std::string &p_s)
 {
-    std::vector<std::string> inputs = strToVec(p_s);
+    std::vector<std::string> inputs = Utils::strToVec(p_s);
     // std::cout << inputs.size() << std::endl;
     /*     m_A.setX(strToNum<int>(inputs[0]));
         m_A.setY(strToNum<int>(inputs[1]));

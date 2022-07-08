@@ -1,6 +1,9 @@
-#pragma once
-#include "../Shape/Shape.h"
+#ifndef __CIRCLE_H__
+#define __CIRCLE_H__
 
+#include "../Shape/Shape.h"
+#include "../../Utils/Utils.h"
+#include "../../Point/Point.h"
 class Circle : public Shape
 {
 private:
@@ -15,3 +18,5 @@ public:
     std::string toString() override;
     ~Circle();
 };
+
+#endif // __CIRCLE_H__

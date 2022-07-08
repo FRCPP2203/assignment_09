@@ -1,5 +1,9 @@
-#pragma once
+#ifndef __ELLIPSE_H__
+#define __ELLIPSE_H__
+
 #include "../Shape/Shape.h"
+#include "../../Utils/Utils.h"
+#include "../../Point/Point.h"
 
 class Ellipse : public Shape
 {
@@ -15,3 +19,5 @@ public:
     std::string toString() override;
     ~Ellipse();
 };
+
+#endif // __ELLIPSE_H__

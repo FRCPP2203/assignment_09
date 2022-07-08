@@ -1,3 +1,6 @@
+#ifndef __SHAPEFACTORY_H__
+#define __SHAPEFACTORY_H__
+
 #pragma once
 #include <list>
 #include <fstream>
@@ -7,8 +10,9 @@
 #include "../Circle/Circle.h"
 #include "../Rectangle/Rectangle.h"
 #include "../Ellipse/Ellipse.h"
+#include "../../Utils/Utils.h"
 
-class ShapeFactory : public Shape
+class ShapeFactory
 {
 private:
     /* data */
@@ -19,3 +23,4 @@ public:
     void saveShapesToFile(const std::string &filename, const std::list<Shape *> &shapes);
     ~ShapeFactory();
 };
+#endif // __SHAPEFACTORY_H__

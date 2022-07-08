@@ -8,7 +8,7 @@ Shape *ShapeFactory::createShape(int type, const std::string &s)
     Shape *shapeObj = nullptr;
     switch (type)
     {
-    case 2:
+    case 0:
         shapeObj = new Triangle();
         shapeObj->fromString(s);
         std::cout << shapeObj->toString() << std::endl;
@@ -31,7 +31,7 @@ std::list<Shape *> ShapeFactory::readShapesFromFile(const std::string &filename)
         {
             std::string type = line.substr(0, 1);
             std::string s = line.substr(2, line.length() - 2);
-            shapes.push_back(createShape(strToNum<int>(type), s));
+            shapes.push_back(createShape(Utils::strToNum<int>(type), s));
         }
         data.close();
     }

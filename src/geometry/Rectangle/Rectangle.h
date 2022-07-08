@@ -1,6 +1,9 @@
-#pragma once
-#include "../Shape/Shape.h"
+#ifndef __RECTANGLE_H__
+#define __RECTANGLE_H__
 
+#include "../Shape/Shape.h"
+#include "../../Utils/Utils.h"
+#include "../../Point/Point.h"
 class Rectangle : public Shape
 {
 private:
@@ -15,3 +18,5 @@ public:
     std::string toString() override;
     ~Rectangle();
 };
+
+#endif // __RECTANGLE_H__

@@ -1,20 +1,17 @@
+#ifndef __SHAPE_H__
+#define __SHAPE_H__
+
 #pragma once
 #include <string>
-#include "../../Point/Point.h"
 
 #define PI 3.14
-class Shape : public Point
+class Shape
 {
-
-protected:
-    template <typename T>
-    T strToNum(const std::string &s);
-    std::vector<std::string> strToVec(const std::string &s);
-
 public:
     Shape();
-    virtual double getPerimeter();
-    virtual double getArea();
-    virtual void fromString(const std::string &s);
-    virtual std::string toString();
+    virtual double getPerimeter() = 0;
+    virtual double getArea() = 0;
+    virtual void fromString(const std::string &s) = 0;
+    virtual std::string toString() = 0;
 };
+#endif // __SHAPE_H__
