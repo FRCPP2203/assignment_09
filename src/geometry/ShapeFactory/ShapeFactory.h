@@ -7,7 +7,8 @@
 #include "../Circle/Circle.h"
 #include "../Rectangle/Rectangle.h"
 #include "../Ellipse/Ellipse.h"
-class ShapeFactory
+
+class ShapeFactory : public Shape
 {
 private:
     /* data */

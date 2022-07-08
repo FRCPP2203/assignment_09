@@ -1,5 +1,8 @@
 #include "ShapeFactory.h"
 
+ShapeFactory::ShapeFactory()
+{
+}
 Shape *ShapeFactory::createShape(int type, const std::string &s)
 {
     Shape *shapeObj = nullptr;
